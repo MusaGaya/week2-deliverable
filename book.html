@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment</title>
+</head>
+
+<body>
+  <header>
+    <h1>MKG Tech Institute</h1>
+    <p>Booking & Appointment Form</p>
+    <hr />
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="book.html">Book</a>
+  </nav>
+
+  <hr />
+
+  <main>
+    <section>
+      <h2>Book an Appointment</h2>
+
+      <form action="index.html" method="POST" onsubmit="return showConfirmation()">
+        <p>
+          <label>Full Name:</label><br />
+          <input type="text" name="fullname" required />
+        </p>
+
+        <p>
+          <label>Email Address:</label><br />
+          <input type="email" name="email" required />
+        </p>
+
+        <p>
+          <label>Telephone Number:</label><br />
+          <input type="tel" name="phone" required />
+        </p>
+
+        <p>
+          <label>Number of Tickets:</label><br />
+          <input type="number" name="tickets" min="1" max="10" />
+        </p>
+
+        <p>
+          <label>Booking Date:</label><br />
+          <input type="date" name="date" />
+        </p>
+
+        <p>
+          <label>Booking Time:</label><br />
+          <input type="time" name="time" />
+        </p>
+
+        <p>
+          <label>Service Type:</label><br />
+          <select name="service">
+            <option>Training</option>
+            <option>Consultation</option>
+            <option>Support</option>
+          </select>
+        </p>
+
+        <p>
+          <label>Gender:</label><br />
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="female" /> Female
+        </p>
+
+        <p>
+          <input type="checkbox" required />
+          I agree to the terms and conditions
+        </p>
+
+        <p>
+          <input type="submit" value="Submit Booking" />
+        </p>
+      </form>
+    </section>
+  </main>
+  <hr />
+  &copy;Copyright 2026 MKG Tech Institute. All rights reserved.
+
+  <script>
+    function showConfirmation() {
+      alert("Thank you for booking an appointment with MKG Tech Institute!");
+      return true; // Allow form submission
+    }
+  </script>
+</body>
+
+</html>
